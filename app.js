@@ -16,10 +16,20 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
 
-document.getElementById("score-0").textContent = "0";
-document.getElementById("score-1").textContent = "0";
-document.getElementById("current-0").textContent = "0";
-document.getElementById("current-1").textContent = "0";
+function newGame() {
+    scores[0] = 0;
+    scores[1] = 0;
+    roundScore = 0;
+    document.getElementById("score-0").textContent = "0";
+    document.getElementById("score-1").textContent = "0";
+    document.getElementById("current-0").textContent = "0";
+    document.getElementById("current-1").textContent = "0";
+    document.querySelector(".player-" + activePlayer + "-panel").classList.remove("winner");
+    document.querySelector(".player-" + activePlayer + "-panel").classList.add("active");
+    
+}
+
+newGame();
 
 document.querySelector(".dice").style.display = "none";
 
@@ -62,12 +72,19 @@ document.querySelector(".btn-hold").addEventListener("click", function(){
     
     // Check if player won the game
     
-    if(scores[activePlayer] >= 100) 
+    if(scores[activePlayer] >= 15) {
         document.getElementById("score-" + activePlayer).textContent = "Won";
+        document.querySelector(".dice").style.display = "none";
+        document.querySelector(".player-" + activePlayer + "-panel").classList.add("winner");
+        document.querySelector(".player-" + activePlayer + "-panel").classList.remove("active");
+    }
+    else {
+        nextPlayer();
+    }
+    
+    
     
     // since player selected hold, we added their score and now switch to differnt player
-    
-    nextPlayer();
 
 });
 
@@ -85,6 +102,17 @@ function nextPlayer() {
     document.querySelector(".dice").style.display = "none";
     
 }
+
+
+// When user presses new game, it restarts all the values to 0
+
+document.querySelector(".btn-new").addEventListener("click", function(){
+    
+    document.querySelector(".dice").style.display = "none";
+    
+    newGame();
+    
+});
    
 
 
