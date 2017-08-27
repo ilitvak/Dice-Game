@@ -43,22 +43,12 @@ document.querySelector(".btn-roll").addEventListener("click", function(){
     }
     
     else {
-        activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
-        roundScore = 0;
-        
-        document.getElementById("current-0").textContent = "0";
-        document.getElementById("current-1").textContent = "0";
-        
-        document.querySelector(".player-0-panel").classList.toggle("active");
-        document.querySelector(".player-1-panel").classList.toggle("active");
-        
-        document.querySelector(".dice").style.display = "none";
+        nextPlayer();
     }
     
 });
 
 document.querySelector(".btn-hold").addEventListener("click", function(){
-    
     
     // add current score to global score
     
@@ -72,7 +62,29 @@ document.querySelector(".btn-hold").addEventListener("click", function(){
     
     // Check if player won the game
     
+    if(scores[activePlayer] >= 100) 
+        document.getElementById("score-" + activePlayer).textContent = "Won";
+    
+    // since player selected hold, we added their score and now switch to differnt player
+    
+    nextPlayer();
+
 });
+
+function nextPlayer() {
+    
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+
+    document.getElementById("current-0").textContent = "0";
+    document.getElementById("current-1").textContent = "0";
+
+    document.querySelector(".player-0-panel").classList.toggle("active");
+    document.querySelector(".player-1-panel").classList.toggle("active");
+
+    document.querySelector(".dice").style.display = "none";
+    
+}
    
 
 
