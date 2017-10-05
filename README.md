@@ -11,6 +11,15 @@ player gets the same opportunity.
 * Vanilla JavaScript
 * Love
 
+## Deployed With
+
+* Heroku 
+
+## Required For Installation
+
+* NodeJS
+* NPM
+
 Screenshots
 -----------
 

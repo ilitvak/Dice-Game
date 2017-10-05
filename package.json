@@ -1,0 +1,16 @@
+{
+  "name": "Dice-Game-x",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "8.6.0",
+    "npm": "5.4.2"
+  },
+  "dependencies": {
+    "express": "4.15.5"
+  },
+  "author": "Irwin Litvak",
+  "license": "ISC"
+}
