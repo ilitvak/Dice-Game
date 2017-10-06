@@ -9,16 +9,18 @@ player gets the same opportunity.
 * HTML5
 * CSS3
 * Vanilla JavaScript
+* NodeJS
+* NPM
 * Love
 
 ## Deployed With
 
 * Heroku 
 
-## Required For Installation
+## Link to Project
 
-* NodeJS
-* NPM
+https://dice-game-x.herokuapp.com/
+
 
 Screenshots
 -----------
