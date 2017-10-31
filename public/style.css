@@ -152,3 +152,139 @@ i {
 
 .winner { background-color: #f7f7f7; }
 .winner .player-name { font-weight: 300; color: #EB4D4D; }
+
+/* Big tablet to 1200px (widths smaller than the 1140px row) */
+@media only screen and (max-width: 1200px){
+    
+}
+
+/* Small tablet to big tablet: from 768px to 1023px */
+@media only screen and (max-width: 1023px){
+    
+    .wrapper {
+        width: 90%;
+    }
+    
+    .player-current-box {
+        width: 100%;
+    }
+    
+    .player-name {
+        font-size: 4.3vw;
+    }
+    
+    .player-0-panel, .player-1-panel {
+        height: auto;
+        padding: 10%;
+    }
+    
+    .active .player-name::after {
+        font-size: inherit;
+        top: -3px;
+        right: 0;
+    }
+    
+    .btn-roll, .btn-hold {
+        font-size: 2vw;
+    }
+    
+    .btn-roll {
+        top: 73%;
+    }
+    
+    .btn-hold {
+        top: 80%;
+    }
+}
+
+/* Small phones to small tablets from 481px to 767px */
+@media only screen and (max-width: 767px){
+    
+    .btn-new {
+        top: 7%;
+        font-size: 2.5vw;
+    }
+    
+    .btn-new i {
+        font-size: 5vw;
+        line-height: 5vw;
+    }
+    
+    
+    .player-current-box {
+        width: 70%;
+        padding: 5%;
+    }
+    
+    .player-score {
+        font-size: 10vw;
+    }
+}
+
+/* Small phones from 0 to 480px */
+@media only screen and (max-width: 480px){
+    
+    
+    .player-0-panel, .player-1-panel {
+        width: 100%;
+    }
+    
+    .player-name {
+        font-size: 5vw;
+    }
+    
+    .player-score {
+        margin-bottom: 5%;
+    }
+    
+    .player-current-box {
+        width: 40%;
+        padding: 2%;
+    }
+    
+    .player-current-score {
+        font-size: 20px;
+    }
+    
+    .active .player-name::after {
+        top: 0;
+        right: 27%;
+    }
+    
+    button {
+        width: 100px;
+    }
+    
+    
+    .btn-new {
+        top: 5%;
+        font-size: 3vw;
+    }
+    
+    .btn-new i {
+        margin-right: 10px;
+        font-size: 5.5vw;
+        line-height: 5.5vw;
+    }
+    
+    .btn-roll {
+        top: 48%;
+        left: 10%;
+        transform: none;
+        text-align: left;
+    }
+    
+    .btn-hold {
+        top: 48%;
+        left: 90%;
+        text-align: left;
+    }
+    
+    .dice {
+        width: 15%;
+        height: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
